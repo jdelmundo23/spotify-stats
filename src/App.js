@@ -1,6 +1,9 @@
 import getData from './token.js'
 import {useState, useRef} from 'react';
 
+/* User token goes here */
+const user = null;
+
 const scopes = [
   'user-read-playback-state',
   'user-modify-playback-state',
@@ -9,10 +12,7 @@ const scopes = [
   'user-top-read'
 ]
 
-// const album = await getData('7f4ead59e5094fa7a47f2b3846ad773e',"/albums/07w0rG5TETcyihsEIZR3qG",scopes.join(' '));
-// const albumData = album.tracks.items;
-// console.log(album);
-const topTracks = await getData('7f4ead59e5094fa7a47f2b3846ad773e',"/me/top/tracks?time_range=medium_term",scopes.join(' '));
+const topTracks = await getData(token,"/me/top/tracks?time_range=medium_term",scopes.join(' '));
 console.log(topTracks);
 
 export default function App() {
