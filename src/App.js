@@ -2,7 +2,7 @@ import getData from './token.js'
 import {useState, useRef} from 'react';
 
 /* User token goes here */
-const user = null;
+const token = null;
 
 const scopes = [
   'user-read-playback-state',
